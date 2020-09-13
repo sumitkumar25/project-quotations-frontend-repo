@@ -1,0 +1,16 @@
+form {
+    padding: var(--form-padding);
+    .form {
+        &--block {
+            padding: var(--form-block-padding);
+        }
+        &--label {
+            font-size: var(--app-1rem);
+        }
+        &--input input{
+            display: inline-block;
+            width: 100%;
+            height: var(--form-input-height);
+        }
+    }
+}

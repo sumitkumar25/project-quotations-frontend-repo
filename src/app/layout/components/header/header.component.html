@@ -1,0 +1,11 @@
+<header class="header pad--h__10 display--flex">
+    <h1>Quotes</h1>
+    <nav>
+        <a (click)="displayLogin = !displayLogin">
+            Login
+        </a>
+    </nav>
+    <div class="header--login__wrapper" *ngIf="displayLogin">
+        <app-login></app-login>
+    </div>
+</header>

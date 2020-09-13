@@ -1,0 +1,12 @@
+@mixin box-shadow-base {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: inset 5px -5px 5px 5px rgba(var(#{--app-black}), 0.5);
+}
+@mixin background-base {
+    background-image: linear-gradient(to bottom, #{$app-white} 0%, rgba(#{$app-black}, 1) 65%);
+    // @include box-shadow-base()
+}
+
+@mixin bordered($color: var(--app-black), $width: 1px) {
+    border: $width solid $color;
+}

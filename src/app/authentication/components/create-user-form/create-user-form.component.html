@@ -1,26 +1,37 @@
-<form [formGroup]="createForm">
-    <div class="form-block">
-        <div class="form-label">
+<form [formGroup]="createForm" (ngSubmit)="createUser($event)">
+    <div class="form--block">
+        <div class="form--label">
             <label for="username">Username</label>
         </div>
-        <div class="form-input">
+        <div class="form--input">
             <input type="text" class="username" formControlName="username">
         </div>
     </div>
-    <div class="form-block">
-        <div class="form-label">
+    <div class="form--block">
+        <div class="form--label">
             <label for="email">Email</label>
         </div>
-        <div class="form-input">
+        <div class="form--input">
             <input type="email" class="email" formControlName="email">
         </div>
     </div>
-    <div class="form-block">
-        <div class="form-label">
+    <div class="form--block">
+        <div class="form--label">
             <label for="password">Password</label>
         </div>
-        <div class="form-input">
+        <div class="form--input">
             <input type="password" class="password" formControlName="password">
         </div>
+    </div>
+    <div class="form--block">
+        <!-- <div class="form--label">
+            <label for="password">Password</label>
+        </div> -->
+        <div class="form--input">
+            <button type="submit">Create</button>
+        </div>
+    </div>
+    <div class="form--block">
+        <a type="button" (click)="backToLoginHandler()">back to login</a>
     </div>
 </form>

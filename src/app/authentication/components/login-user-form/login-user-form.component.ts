@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { Validators, FormBuilder } from '@angular/forms';
   styleUrls: ['./login-user-form.component.scss']
 })
 export class LoginUserFormComponent implements OnInit {
+  @Output() createUser = new EventEmitter();
+
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.min(6)]]
@@ -14,6 +16,14 @@ export class LoginUserFormComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+  }
+
+  loginUser($event) {
+    console.log($event);
+  }
+
+  createUserHandler() {
+    this.createUser.emit();
   }
 
 }

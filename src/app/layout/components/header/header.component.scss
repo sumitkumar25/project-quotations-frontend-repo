@@ -1,0 +1,13 @@
+@import "./../../../../styles/abstract/mixins";
+.header {
+    display: flex;
+    border: solid 1px;
+    justify-content: space-between;
+    align-items: center;
+    &--login__wrapper {
+        position: fixed;
+        right: 0;
+        top: 62px;
+        @include bordered();
+    }
+}
