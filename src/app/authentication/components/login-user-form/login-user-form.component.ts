@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-login-user-form',
@@ -13,13 +14,16 @@ export class LoginUserFormComponent implements OnInit {
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.min(6)]]
   });
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
   }
 
   loginUser($event) {
-    console.log($event);
+    this.authenticationService.loginUser(this.loginForm.value)
+      .subscribe(res => {
+        console.log(res);
+      })
   }
 
   createUserHandler() {
