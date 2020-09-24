@@ -1,7 +1,10 @@
 @import "./../../../../styles/abstract/mixins";
 .header {
-    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
     border: solid 1px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     &--login__wrapper {
