@@ -1,1 +1,6 @@
-<p>login works!</p>
+<ng-container *ngIf="createUser;else login">
+    <app-create-user-form (backToLogin)="createUser = false;"></app-create-user-form>
+</ng-container>
+<ng-template #login>
+    <app-login-user-form (createUser)="createUser = true;"></app-login-user-form>
+</ng-template>

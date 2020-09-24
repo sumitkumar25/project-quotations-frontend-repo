@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginUser($event)">
+    <div class="form--block">
+        <div class="form--label">
+            <label for="email">Email</label>
+        </div>
+        <div class="form--input">
+            <input type="email" class="email" formControlName="email">
+        </div>
+    </div>
+    <div class="form--block">
+        <div class="form--label">
+            <label for="password">Password</label>
+        </div>
+        <div class="form--input">
+            <input type="password" class="password" formControlName="password">
+        </div>
+    </div>
+    <div class="form--block">
+        <!-- <div class="form--label">
+            <label for="password">Password</label>
+        </div> -->
+        <div class="form--input">
+            <button type="submit">Login</button>
+        </div>
+    </div>
+    <div class="form--block">
+        <a type="button" (click)="createUserHandler()">Create a new user</a>
+    </div>
+</form>

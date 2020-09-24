@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/abstract/variables";
+@import "./styles/abstract/mixins";
+@import "./styles/base/reset";
+@import "./styles/base/typography";
+@import "./styles/layout/forms";
+
+//
+// layout
+@import "./styles/layout/common";
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
